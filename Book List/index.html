@@ -9,22 +9,7 @@
             href="https://cdnjs.cloudflare.com/ajax/libs/skeleton/2.0.4/skeleton.css"
         />
 
-        <style>
-            .success,
-            .error {
-                color: white;
-                padding: 5px;
-                margin: 5px 0 15px 0;
-            }
-
-            .success {
-                background: green;
-            }
-
-            .error {
-                background: red;
-            }
-        </style>
+        <link rel="stylesheet" href="style.css" />
         <title>Book List</title>
     </head>
     <body>
@@ -40,29 +25,22 @@
                     <input type="text" id="author" class="u-full-width" />
                 </div>
                 <div>
+                    <label for="classificacao">Classificação</label>
+
+                    <input
+                        type="number"
+                        class="u-full-width"
+                        id="rating-control"
+                        step="0.1"
+                        max="5"
+                        placeholder="Rate 1 - 5"
+                    />
+                </div>
+                <div>
                     <label for="isbn">ISBN#</label>
                     <input type="text" id="isbn" class="u-full-width" />
                 </div>
-                <div>
-                    <label for="isbn">Classificação</label>
-                    <p class="u-full-width" id="estrelas">
-                        <a href="#" class="classficação"
-                            ><i class="far fa-star"></i
-                        ></a>
-                        <a href="#" class="classficação"
-                            ><i class="far fa-star"></i
-                        ></a>
-                        <a href="#" class="classficação"
-                            ><i class="far fa-star"></i
-                        ></a>
-                        <a href="#" class="classficação"
-                            ><i class="far fa-star"></i
-                        ></a>
-                        <a href="#" class="classficação"
-                            ><i class="far fa-star"></i
-                        ></a>
-                    </p>
-                </div>
+
                 <div>
                     <input type="submit" value="Submit" class="u-full-width" />
                 </div>
@@ -73,19 +51,14 @@
                         <th>Title</th>
                         <th>Author</th>
                         <th>ISBN</th>
+                        <th>Classificação</th>
                         <th></th>
                     </tr>
                 </thead>
                 <tbody id="book-list"></tbody>
             </table>
         </div>
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.0-2/js/all.min.js"
-            integrity="sha256-+Q/z/qVOexByW1Wpv81lTLvntnZQVYppIL1lBdhtIq0="
-            crossorigin="anonymous"
-        ></script>
-        <script src="appes6.js"></script>
+
+        <script src="app.js"></script>
     </body>
 </html>
-
-<!-- <td><i class="far fa-star"></i></td> -->
